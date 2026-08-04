@@ -13,4 +13,5 @@
 - README.md (ไฟล์คำอธิบาย)
 
 ## แหล่งอ้างอิงข้อมูล (Citations & References)
-- [ระบุแหล่งที่มาของข้อมูล/โมเดล/โค้ดที่นำมาอ้างอิง หรือลิงก์ URL]
+- guitar-chords-db-json https://github.com/szaza/guitar-chords-db-json
+- chord-collection https://github.com/T-vK/chord-collection

@@ -1,0 +1,11 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Large data files
+LAB03/RAG-Project/data/*.csv
+
+# Intermediate outputs
+LAB03/RAG-Project/outputs/
