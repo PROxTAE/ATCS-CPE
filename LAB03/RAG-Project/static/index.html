@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guitar Chords & Music Theory RAG</title>
+    <!-- Google Fonts: Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar for RAG Metadata & Context Source Chunks -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <i class="fa-solid fa-guitar logo-icon"></i>
+                <h2>Guitar RAG DB</h2>
+            </div>
+            
+            <div class="model-info-card">
+                <h3>Active Configuration</h3>
+                <div class="info-item">
+                    <span class="info-label">Model:</span>
+                    <span class="info-val model-name">intfloat/multilingual-e5-large</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Framework:</span>
+                    <span class="info-val">FAISS CPU</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Search Strategy:</span>
+                    <span class="info-val">Cosine Similarity + CSV Lookup</span>
+                </div>
+            </div>
+
+            <div class="sources-container">
+                <h3><i class="fa-solid fa-list-check"></i> Retrieved Sources</h3>
+                <p class="no-sources-msg">ส่งคำถามเพื่อค้นหาเอกสารอ้างอิงและดูคะแนนความคล้ายคลึง</p>
+                <div class="sources-list" id="sourcesList">
+                    <!-- Dynamic retrieved sources cards go here -->
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Chat Area -->
+        <main class="chat-area">
+            <header class="chat-header">
+                <div class="bot-info">
+                    <div class="bot-avatar">🎸</div>
+                    <div class="bot-details">
+                        <h1>Guitar RAG Chatbot</h1>
+                        <span class="status-indicator"><span class="status-dot"></span> ระบบสืบค้นคอร์ดพร้อมใช้งาน</span>
+                    </div>
+                </div>
+                <button class="clear-btn" id="clearBtn" title="ล้างการคุย"><i class="fa-solid fa-trash-can"></i></button>
+            </header>
+
+            <!-- Chat messages feed -->
+            <div class="chat-feed" id="chatFeed">
+                <div class="message bot-message fade-in">
+                    <div class="msg-bubble">
+                        สวัสดีครับยินดีต้อนรับ! 🎸 ผมคือบอทสืบค้นข้อมูลคอร์ดกีตาร์ ทฤษฎีดนตรี และคลังเพลง ถามคำถามเกี่ยวกับคอร์ดหรือวิธีจับคอร์ดได้เลยครับ เช่น 'คอร์ด C จับยังไง' หรือลองค้นหาคอร์ดเพลงด้วย ID เช่น 'เพลง 3' หรือแนะนำเพลงตามแนว เช่น 'ขอเพลงแนว metal หน่อย' ครับ!
+                    </div>
+                    <span class="msg-time">เมื่อสักครู่</span>
+                </div>
+            </div>
+
+            <!-- Typing indicator -->
+            <div class="typing-indicator-container hidden" id="typingIndicator">
+                <div class="typing-indicator">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <span class="typing-text">กำลังค้นหาคอร์ดาต้าเบส...</span>
+            </div>
+
+            <!-- Input controller -->
+            <footer class="chat-footer">
+                <form class="input-form" id="inputForm">
+                    <input 
+                        type="text" 
+                        id="queryInput" 
+                        placeholder="พิมพ์ถามคำถาม เช่น คอร์ด C จับยังไง หรือ เพลง ID 3..." 
+                        autocomplete="off"
+                        required
+                    >
+                    <button type="submit" class="send-btn" id="sendBtn" title="ส่งคำถาม">
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </form>
+            </footer>
+        </main>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
