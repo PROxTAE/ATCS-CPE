@@ -4,7 +4,7 @@
 
 ---
 
-## 👥 สมาชิกผู้จัดทำ (Author)
+## 👥 ผู้จัดทำ (Author)
 - **ชื่อ-นามสกุล (Name):** นายนิธิศ มะโนรา
 - **รหัสนักศึกษา (Student ID):** 116730462042-6
 
@@ -13,7 +13,7 @@
 ## 🌟 ฟีเจอร์เด่นของระบบ (Key Features)
 1. **Hybrid Retrieval Search**:
    * **Vector Search**: ค้นหาข้อมูลเชิงคุณภาพ (วิธีจับคอร์ดกีตาร์, ความรู้ทฤษฎีดนตรีทั่วไป, เทคนิคการซ้อมจาก PDF คู่มือ) โดยใช้โมเดล Embedding `intfloat/multilingual-e5-large` ร่วมกับดัชนี **FAISS (CPU)**
-   * **CSV Song Lookup**: ค้นหาคอร์ดของเพลงตามชื่อแนวเพลง (เช่น Pop, Rock, Metal) หรือค้นหาตามรหัสเพลง (Song ID) ได้โดยตรงผ่านฐานข้อมูล CSV ขนาดใหญ่
+   * **CSV Song Lookup**: ค้นหาคอร์ดของเพลงตามชื่อแนวเพลง (เช่น Pop, Rock, Metal) หรือค้นหาตามรหัสเพลง (Song ID) ได้โดยตรงผ่านฐานข้อมูล CSV ขนาดใหญ่ [ สามารถโหลด Dataset ได้ที่ Guitar Chord Database ](https://www.gigasheet.com/sample-data/guitar-chord-database)
 2. **Interactive UI (Glassmorphic Design)**:
    * หน้าเว็บเพจออกแบบด้วยเทคนิค Glassmorphism ที่สวยงาม คลีน และรองรับการตอบสนองทุกขนาดหน้าจอ (Responsive Web Design)
    * แสดงข้อความแชทประวัติสนทนาพร้อมรักษาฟอร์แมตแผนภาพการจับสายกีตาร์อย่างถูกต้องด้วยการตั้งค่า `white-space: pre-wrap`
@@ -97,6 +97,7 @@ python main.py --server
 ---
 
 ## 📖 แหล่งอ้างอิงข้อมูล (Citations & References)
+-- ** Guitar Chord Database CSV **: [https://www.gigasheet.com/sample-data/guitar-chord-database](https://www.gigasheet.com/sample-data/guitar-chord-database)
 - **guitar-chords-db-json**: [https://github.com/szaza/guitar-chords-db-json](https://github.com/szaza/guitar-chords-db-json)
 - **chord-collection**: [https://github.com/T-vK/chord-collection](https://github.com/T-vK/chord-collection)
 - **Learn and Master Guitar Lesson Book (PDF)**: [https://www.learnandmaster.com/resources/Learn-and-Master-Guitar-Lesson-Book.pdf](https://www.learnandmaster.com/resources/Learn-and-Master-Guitar-Lesson-Book.pdf)
