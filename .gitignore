@@ -4,8 +4,16 @@ __pycache__/
 *.pyo
 *.pyd
 
+# Environment & API Keys
+.env
+*.env
+.env.local
+
 # Large data files
 LAB03/RAG-Project/data/*.csv
 
-# Intermediate outputs
+# Intermediate outputs & caches
 LAB03/RAG-Project/outputs/
+LAB04/RAG-Guitar/outputs/
+**/query_cache.json
+query_cache.json

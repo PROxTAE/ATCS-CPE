@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PROxTAE Guitar RAG - Vector Knowledge Assistant & 3D Interactive</title>
+  
+  <!-- Modern Cyberpunk Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Orbitron:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Rajdhani:wght@500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Marked.js for Markdown parsing -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+  <!-- Three.js & OrbitControls & OBJLoader for Real 3D Model -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/OBJLoader.js"></script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="logo-group">
+        <div class="logo-box">
+          <span class="logo-title">PROxTAE</span>
+          <span class="logo-sub">GUITAR RAG</span>
+        </div>
+      </div>
+
+      <nav class="nav-menu">
+        <a href="#chat-section" class="nav-item active"><i class="fa-solid fa-comments"></i> CHAT</a>
+        <a href="#hero-section" class="nav-item"><i class="fa-solid fa-guitar"></i> GUITARS</a>
+        <a href="#results-section" class="nav-item"><i class="fa-solid fa-layer-group"></i> PARTS</a>
+        <a href="#explore-section" class="nav-item"><i class="fa-solid fa-book-open"></i> GUIDES</a>
+        <a href="#explore-section" class="nav-item"><i class="fa-solid fa-tag"></i> BRANDS</a>
+        <a href="#footer-section" class="nav-item"><i class="fa-solid fa-circle-info"></i> ABOUT US</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="btn-history" class="btn-history" title="View Query History">
+          <i class="fa-solid fa-clock-rotate-left"></i> HISTORY
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= HERO FULL-BLEED 3D SECTION ================= -->
+  <main class="main-content">
+    <section id="hero-section" class="hero-section hero-cinematic">
+      
+      <!-- Full-Width Background 3D WebGL Canvas -->
+      <div class="guitar-3d-full-wrapper" id="guitar-canvas-container">
+        <canvas id="guitar-3d-canvas"></canvas>
+
+        <!-- Cyberpunk 3D Overlay Toolset -->
+        <div class="three-controls-hud">
+          <button id="btn-3d-finish" class="btn-3d-tool" title="Switch Guitar Finish Texture">
+            <i class="fa-solid fa-palette"></i> OBSIDIAN
+          </button>
+          <button id="btn-3d-rotate" class="btn-3d-tool active" title="Toggle Auto-Rotation">
+            <i class="fa-solid fa-arrows-rotate"></i> AUTO ROTATE
+          </button>
+          <button id="btn-3d-wireframe" class="btn-3d-tool" title="Toggle Wireframe Blueprint">
+            <i class="fa-solid fa-border-all"></i> BLUEPRINT
+          </button>
+          <button id="btn-3d-reset" class="btn-3d-tool" title="Reset Camera">
+            <i class="fa-solid fa-crosshairs"></i> RESET VIEW
+          </button>
+        </div>
+
+        <div class="three-hint-badge">
+          <i class="fa-solid fa-hand-pointer orange-text"></i> Drag to Rotate 360° · Scroll to Zoom · Click Hotspots
+        </div>
+
+        <!-- Dynamic 3D Projective HTML Hotspots -->
+        <div id="hotspot-container" class="hotspot-container">
+          <div class="hud-pin pin-3d" data-part="headstock" id="hp-headstock">
+            <div class="pin-marker"></div>
+            <span class="pin-label">[HEADSTOCK & TUNERS]</span>
+          </div>
+          <div class="hud-pin pin-3d" data-part="neck" id="hp-neck">
+            <div class="pin-marker"></div>
+            <span class="pin-label">[NECK & FRETS]</span>
+          </div>
+          <div class="hud-pin pin-3d" data-part="body" id="hp-body">
+            <div class="pin-marker"></div>
+            <span class="pin-label">[BODY & JOINT]</span>
+          </div>
+          <div class="hud-pin pin-3d" data-part="pickups" id="hp-pickups">
+            <div class="pin-marker"></div>
+            <span class="pin-label">[PICKUPS]</span>
+          </div>
+          <div class="hud-pin pin-3d" data-part="bridge" id="hp-bridge">
+            <div class="pin-marker"></div>
+            <span class="pin-label">[BRIDGE & TREMOLO]</span>
+          </div>
+          <div class="hud-pin pin-3d" data-part="tone" id="hp-tone">
+            <div class="pin-marker"></div>
+            <span class="pin-label">[CONTROLS & JACK]</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Layered Hero Content (Text Behind / Overlapped by 3D Model) -->
+      <div class="hero-overlay-grid">
+        
+        <!-- Left Hero Column -->
+        <div class="hero-left-layer">
+          <div class="tech-tag">[KNOWLEDGE BASE] &nbsp; <i class="fa-solid fa-arrow-right"></i></div>
+          <h1 class="hero-title-giant">
+            ASK ANYTHING<br>
+            ABOUT <span class="highlight-orange">GUITARS</span>
+          </h1>
+          <p class="hero-subtitle">
+            ถามได้ทุกเรื่องเกี่ยวกับกีตาร์ อุปกรณ์ ทฤษฎี และวิธีจับคอร์ด<br>
+            ข้อมูลจากแหล่งความรู้ที่ผ่านการ Normalize และตรวจสอบความถูกต้อง
+          </p>
+          <div class="powered-badge">
+            <span class="bracket">[</span> VECTOR SEARCH POWERED <span class="bracket">]</span> <span class="plus-icon">+</span>
+          </div>
+        </div>
+
+        <!-- Right Hero Column (Vector Database Info Card) -->
+        <div class="hero-right-layer">
+          <div class="hud-card">
+            <div class="hud-card-header">
+              <i class="fa-solid fa-microchip orange-text"></i> PROxTAE KNOWLEDGE<br>
+              VECTOR DATABASE
+            </div>
+            <div class="hud-card-body">
+              <div class="hud-item"><span class="slash">//</span> SPECS & WOODS</div>
+              <div class="hud-item"><span class="slash">//</span> PARTS & HARDWARE</div>
+              <div class="hud-item"><span class="slash">//</span> TONE & SOUND</div>
+              <div class="hud-item"><span class="slash">//</span> BRANDS & MODELS</div>
+              <div class="hud-item"><span class="slash">//</span> CHORDS & THEORY</div>
+              <div class="hud-item"><span class="slash">//</span> SETUP GUIDES</div>
+            </div>
+            <div class="hud-card-footer">
+              <span class="pulse-dot"></span> BAAI/bge-small-en-v1.5 (384d)
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= MODERN CLEAN CHAT SECTION ================= -->
+    <section id="chat-section" class="chat-section">
+      <div class="chat-wrapper">
+        
+        <div class="chat-container">
+          
+          <!-- Chat Header Bar -->
+          <div class="chat-header">
+            <div class="chat-title-group">
+              <div class="chat-ai-badge">
+                <i class="fa-solid fa-guitar orange-text"></i>
+              </div>
+              <div>
+                <div class="chat-title">PROxTAE GUITAR AI</div>
+                <div class="chat-subtitle"><i class="fa-solid fa-brain orange-text"></i> Powered by Google Gemini · Natural RAG Synthesis</div>
+              </div>
+            </div>
+
+            <div class="chat-actions">
+              <div class="chat-status">
+                <span class="status-indicator"></span> 
+                <span id="rag-status-text">Pipeline Online</span>
+              </div>
+              <button id="btn-clear-chat" class="btn-clear-chat" title="Clear Chat History">
+                <i class="fa-solid fa-rotate-left"></i> New Chat
+              </button>
+            </div>
+          </div>
+
+          <!-- Quick Suggestion Prompts Grid -->
+          <div class="quick-prompts-container">
+            <div class="quick-prompts-label"><i class="fa-solid fa-bolt orange-text"></i> Suggested Questions:</div>
+            <div class="quick-prompts-grid">
+              <button class="chip" data-query="How do you play the C Major chord on guitar?">
+                <i class="fa-solid fa-guitar"></i> <span>Play C Major Chord</span>
+              </button>
+              <button class="chip" data-query="What is the difference between Single-Coil and Humbucker pickups?">
+                <i class="fa-solid fa-bolt"></i> <span>Single-Coil vs Humbucker</span>
+              </button>
+              <button class="chip" data-query="How do you adjust the truss rod to fix fret buzz?">
+                <i class="fa-solid fa-wrench"></i> <span>Fix Fret Buzz & Truss Rod</span>
+              </button>
+              <button class="chip" data-query="What are the tonal differences between Sitka Spruce and Cedar?">
+                <i class="fa-solid fa-tree"></i> <span>Spruce vs Cedar Soundboard</span>
+              </button>
+              <button class="chip" data-query="What is the CAGED system on the guitar fretboard?">
+                <i class="fa-solid fa-music"></i> <span>The CAGED System</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Messages Scrollable Box -->
+          <div class="chat-messages" id="chat-messages">
+            <!-- Welcome Message -->
+            <div class="message-row assistant">
+              <div class="msg-avatar"><i class="fa-solid fa-guitar"></i></div>
+              <div class="msg-bubble">
+                <div class="msg-header">
+                  <span class="msg-sender">PROxTAE Guitar AI</span>
+                  <span class="msg-time">Just now</span>
+                </div>
+                <div class="msg-text">
+                  Hello! I am your <strong>PROxTAE Guitar Master AI Knowledge Assistant</strong>.<br>
+                  Ask me anything about guitar specs, tonewoods, pickups, setups, troubleshooting, or chord fingerings!
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modern Floating Chat Input Bar -->
+          <div class="chat-input-wrapper">
+            <form class="chat-input-bar" id="chat-form">
+              <input type="text" id="chat-input" placeholder="Ask anything about guitars, setups, chords, tonewoods..." autocomplete="off" required>
+              <button type="submit" class="btn-send" id="btn-send" title="Send Question">
+                <i class="fa-solid fa-arrow-up"></i>
+              </button>
+            </form>
+            <div class="chat-disclaimer">
+              PROxTAE Guitar RAG leverages FAISS Dense Cosine Search & BM25Okapi RRF. Please verify critical repair measurements.
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= VECTOR SEARCH & RANKING SECTION ================= -->
+    <section id="results-section" class="results-section">
+      <div class="results-layout">
+        
+        <!-- Left: Search Results Ranking (Vector Similarity) -->
+        <div class="ranking-col">
+          <div class="section-title">
+            <span class="slash">//</span> SEARCH RESULTS & RANKING <span class="sub-dim">(VECTOR SIMILARITY)</span>
+          </div>
+
+          <div class="ranking-cards-list" id="ranking-cards-list">
+            <!-- Initial Showcase Placeholder Ranking Cards -->
+            <div class="ranking-card rank-1">
+              <div class="rank-num">01</div>
+              <div class="rank-thumb"><i class="fa-solid fa-guitar"></i></div>
+              <div class="rank-content">
+                <h4 class="card-title">Fender Stratocaster Tonal Characteristics</h4>
+                <p class="card-desc">Contoured double-cutaway solid alder body with 3 single-coil pickups, glassy chime, bell-like highs, and signature out-of-phase quack...</p>
+                <div class="card-tags">
+                  <span class="tag">Stratocaster</span>
+                  <span class="tag">Single-Coil</span>
+                  <span class="tag">Blues/Funk</span>
+                  <span class="tag">Alder</span>
+                </div>
+              </div>
+              <div class="rank-score-box">
+                <span class="score-label">SIMILARITY</span>
+                <span class="score-val">0.96</span>
+                <div class="score-bar"><div class="score-fill" style="width: 96%;"></div></div>
+                <button class="btn-view-source" onclick="showStaticModal(0)">VIEW SOURCE</button>
+              </div>
+            </div>
+
+            <div class="ranking-card rank-2">
+              <div class="rank-num">02</div>
+              <div class="rank-thumb"><i class="fa-solid fa-guitar"></i></div>
+              <div class="rank-content">
+                <h4 class="card-title">Gibson Les Paul Solid Mahogany Construction</h4>
+                <p class="card-desc">Thick solid mahogany body topped with carved maple cap, dual humbuckers, warm sustain, high output, and heavy distortion capability...</p>
+                <div class="card-tags">
+                  <span class="tag">Les Paul</span>
+                  <span class="tag">Humbucker</span>
+                  <span class="tag">Mahogany</span>
+                  <span class="tag">Rock/Metal</span>
+                </div>
+              </div>
+              <div class="rank-score-box">
+                <span class="score-label">SIMILARITY</span>
+                <span class="score-val">0.89</span>
+                <div class="score-bar"><div class="score-fill" style="width: 89%;"></div></div>
+                <button class="btn-view-source" onclick="showStaticModal(1)">VIEW SOURCE</button>
+              </div>
+            </div>
+
+            <div class="ranking-card rank-3">
+              <div class="rank-num">03</div>
+              <div class="rank-thumb"><i class="fa-solid fa-guitar"></i></div>
+              <div class="rank-content">
+                <h4 class="card-title">C Major Open Chord Voicing & Finger Placement</h4>
+                <p class="card-desc">Standard open C Major chord fretted x-3-2-0-1-0 across strings from 6th (Low E) to 1st (High E)...</p>
+                <div class="card-tags">
+                  <span class="tag">Chords</span>
+                  <span class="tag">C Major</span>
+                  <span class="tag">Beginner</span>
+                  <span class="tag">Open Chord</span>
+                </div>
+              </div>
+              <div class="rank-score-box">
+                <span class="score-label">SIMILARITY</span>
+                <span class="score-val">0.84</span>
+                <div class="score-bar"><div class="score-fill" style="width: 84%;"></div></div>
+                <button class="btn-view-source" onclick="showStaticModal(2)">VIEW SOURCE</button>
+              </div>
+            </div>
+          </div>
+
+          <button id="btn-load-more" class="btn-load-more">
+            LOAD MORE RESULTS <i class="fa-solid fa-chevron-down"></i>
+          </button>
+        </div>
+
+        <!-- Right: Query Details & About Vector Search -->
+        <div class="query-details-col">
+          
+          <!-- Query Analytics Box -->
+          <div class="details-panel">
+            <div class="panel-header">
+              <span class="slash">//</span> QUERY DETAILS
+            </div>
+            <div class="panel-body">
+              <div class="detail-row">
+                <span class="d-label">LAST QUERY</span>
+                <span class="d-val highlight" id="stat-query">"How do you play C Major chord?"</span>
+              </div>
+              <div class="detail-row">
+                <span class="d-label">MODEL</span>
+                <span class="d-val font-mono" id="stat-model">BAAI/bge-small-en-v1.5</span>
+              </div>
+              <div class="detail-row">
+                <span class="d-label">KNOWLEDGE BASE</span>
+                <span class="d-val" id="stat-chunks">512 Normalized Chunks</span>
+              </div>
+              <div class="detail-row">
+                <span class="d-label">SEARCH LATENCY</span>
+                <span class="d-val text-green" id="stat-time">22.2 ms</span>
+              </div>
+              <div class="detail-row">
+                <span class="d-label">CACHE STATUS</span>
+                <span class="d-val text-orange" id="stat-cache">⚡ Active (LRU + Semantic)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- About Vector Search Box -->
+          <div class="details-panel mt-4">
+            <div class="panel-header">
+              <span class="slash">//</span> ABOUT VECTOR SEARCH
+            </div>
+            <div class="panel-body">
+              <div class="vector-constellation" id="vector-canvas-box">
+                <canvas id="vector-canvas" width="280" height="110"></canvas>
+              </div>
+              <p class="vector-desc">
+                เราใช้ <strong>Dense Cosine Similarity + BM25 Okapi with Weighted RRF</strong> เพื่อค้นหาความรู้ที่ตรงและครอบคลุมที่สุดจากฐานข้อมูลกีตาร์
+              </p>
+              <a href="#explore-section" class="link-learn-more">LEARN MORE <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= EXPLORE MORE SECTION ================= -->
+    <section id="explore-section" class="explore-section">
+      <div class="section-title">
+        <span class="slash">//</span> EXPLORE MORE TOPICS
+      </div>
+      <div class="explore-grid">
+        
+        <div class="explore-card" data-topic="Guitar Parts & Hardware">
+          <div class="exp-icon"><i class="fa-solid fa-wrench"></i></div>
+          <div class="exp-title">GUITAR PARTS</div>
+          <div class="exp-sub">ทำความเข้าใจส่วนประกอบของกีตาร์</div>
+        </div>
+
+        <div class="explore-card" data-topic="Tone Guides & Pickups">
+          <div class="exp-icon"><i class="fa-solid fa-sliders"></i></div>
+          <div class="exp-title">TONE GUIDES</div>
+          <div class="exp-sub">แนะนำโทนเสียงในแบบต่างๆ</div>
+        </div>
+
+        <div class="explore-card" data-topic="Guitar Brands & Selection">
+          <div class="exp-icon"><i class="fa-solid fa-gem"></i></div>
+          <div class="exp-title">BRANDS</div>
+          <div class="exp-sub">ค้นหาแบรนด์และรุ่นยอดนิยม</div>
+        </div>
+
+        <div class="explore-card" data-topic="Buying Guides & Body Shapes">
+          <div class="exp-icon"><i class="fa-solid fa-cart-shopping"></i></div>
+          <div class="exp-title">BUYING GUIDE</div>
+          <div class="exp-sub">คู่มือการเลือกซื้อกีตาร์</div>
+        </div>
+
+        <div class="explore-card" data-topic="Guitar Maintenance & Setup">
+          <div class="exp-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+          <div class="exp-title">MAINTENANCE</div>
+          <div class="exp-sub">ดูแลรักษาและเซ็ตอัพกีตาร์</div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= SOURCE VIEWER MODAL ================= -->
+  <div class="modal-backdrop" id="source-modal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div class="modal-title">
+          <i class="fa-solid fa-file-lines orange-text"></i> <span id="modal-title-text">Source Document Details</span>
+        </div>
+        <button class="btn-close-modal" id="btn-close-modal">&times;</button>
+      </div>
+      <div class="modal-body" id="modal-body-content">
+        <!-- Dynamic Chunk Details -->
+      </div>
+      <div class="modal-footer">
+        <span class="modal-source-meta" id="modal-meta-text">Vector Score: 0.96 | Line: 42</span>
+        <button class="btn-modal-action" id="btn-modal-close">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= HOTSPOT POPOVER ================= -->
+  <div class="hotspot-popover" id="hotspot-popover">
+    <div class="pop-header">
+      <span class="pop-title" id="pop-title">Maple Neck</span>
+      <button class="pop-close" id="pop-close">&times;</button>
+    </div>
+    <div class="pop-cat" id="pop-cat">Tonewoods & Construction</div>
+    <p class="pop-desc" id="pop-desc">Description goes here...</p>
+    <div class="pop-specs" id="pop-specs"></div>
+    <button class="btn-ask-part" id="btn-ask-part"><i class="fa-solid fa-comments"></i> Ask AI about this part</button>
+  </div>
+
+  <!-- ================= FOOTER ================= -->
+  <footer id="footer-section" class="footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <div class="footer-logo">
+          <span class="logo-title">PROxTAE</span>
+          <span class="logo-sub">GUITAR RAG</span>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <a href="#hero-section">ABOUT US</a>
+        <a href="#chat-section">CONTACT</a>
+        <a href="#results-section">PRIVACY POLICY</a>
+        <a href="#explore-section">TERMS OF SERVICE</a>
+      </div>
+
+      <div class="footer-socials">
+        <a href="https://www.facebook.com/share/17R7GAzrtr/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="social-icon" title="Facebook - PROxTAE">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+        <a href="https://www.instagram.com/pro_x_tae15/" target="_blank" rel="noopener noreferrer" class="social-icon" title="Instagram - @pro_x_tae15">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://www.tiktok.com/@pro_x_tae15?_r=1&_t=ZS-98zQoUPaOxj" target="_blank" rel="noopener noreferrer" class="social-icon" title="TikTok - @pro_x_tae15">
+          <i class="fa-brands fa-tiktok"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="/static/guitar3d.js"></script>
+  <script src="/static/app.js"></script>
+</body>
+</html>
