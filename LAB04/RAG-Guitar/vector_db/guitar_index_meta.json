@@ -1,0 +1,9 @@
+{
+  "source_file": "D:\\Protae\\LearningZone\\3yTrem1\\AdvanceML\\LAB\\LAB04\\RAG-Guitar\\data\\guitar_knowledge_base.txt",
+  "source_md5": "4d479de646b891297449f94eba7951fd",
+  "embedding_model": "BAAI/bge-small-en-v1.5",
+  "chunk_size": 500,
+  "chunk_overlap": 60,
+  "total_chunks": 512,
+  "updated_at": "2026-08-18 20:43:28"
+}

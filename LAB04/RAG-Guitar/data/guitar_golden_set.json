@@ -1,0 +1,514 @@
+[
+  {
+    "id": 0,
+    "record_id": 5,
+    "category": "Acoustic Guitars & Selection Guide",
+    "query": "What is a cutaway on an acoustic guitar and does it affect tone?",
+    "relevant_chunk_ids": [
+      8
+    ],
+    "reference_answer": "A cutaway is an indentation in the upper bout of the guitar body designed to allow the player's fretting hand easier access to the higher frets above the 12th/14th fret.\nWhile removing a small section of body volume theoretically slightly reduces air resonance, modern acoustic designs make the acoustic difference virtually imperceptible to the human ear in live and recorded contexts."
+  },
+  {
+    "id": 1,
+    "record_id": 0,
+    "category": "Acoustic Guitars & Selection Guide",
+    "query": "What are the primary differences between acoustic and electric guitars?",
+    "relevant_chunk_ids": [
+      0,
+      1
+    ],
+    "reference_answer": "Acoustic guitars produce sound acoustically through a hollow soundbox and soundboard that amplifies string vibrations naturally without external amplification. They offer warm, natural, dynamic acoustic resonance ideal for folk, fingerstyle, pop, and unplugged performances.\nIn contrast, electric guitars feature solid or semi-hollow wood bodies and rely on electromagnetic pickups to convert string vibrations into electrical signals routed through an amplifier and effects processors. Electric guitars offer immense tonal versatility, sustained distortion, and easier playability due to thinner neck profiles and lighter string tension."
+  },
+  {
+    "id": 2,
+    "record_id": 4,
+    "category": "Acoustic Guitars & Selection Guide",
+    "query": "What is the difference between a 12-fret and a 14-fret acoustic guitar?",
+    "relevant_chunk_ids": [
+      7
+    ],
+    "reference_answer": "A 12-fret acoustic guitar has its neck joined to the body at the 12th fret, placing the bridge closer to the center of the lower bout (the sweet spot of the soundboard), yielding a warmer, rounder tone with greater bass resonance.\nA 14-fret guitar joins at the 14th fret, shifting the bridge closer to the soundhole, which provides improved upper-fret accessibility and a tighter, brighter attack."
+  },
+  {
+    "id": 3,
+    "record_id": 1,
+    "category": "Acoustic Guitars & Selection Guide",
+    "query": "What body shape should a beginner choose for an acoustic guitar?",
+    "relevant_chunk_ids": [
+      2,
+      3
+    ],
+    "reference_answer": "For general versatility and strumming, a Dreadnought (41-inch) is the industry standard offering robust bass response and high acoustic volume. However, players with smaller physical frames or those focusing on fingerstyle often prefer an OM (Orchestra Model) or 000 Concert size (39-40 inches), which offers a balanced midrange and more comfortable lap ergonomics.\nFor travel or smaller hands, 3/4-scale guitars and parlor body shapes provide shorter scale lengths and closer fret spacing, significantly reducing initial finger fatigue."
+  },
+  {
+    "id": 4,
+    "record_id": 3,
+    "category": "Acoustic Guitars & Selection Guide",
+    "query": "What is the difference between a Dreadnought, Concert (OM), and Parlor guitar?",
+    "relevant_chunk_ids": [
+      6
+    ],
+    "reference_answer": "1. Dreadnought: Large body, deep waist, high acoustic volume, booming bass response, optimized for heavy flatpicking and rhythmic strumming.\n2. Concert / OM (Orchestra Model): Narrower waist, shallower body depth, balanced frequency response across bass, mids, and treble, highly responsive to delicate fingerpicking dynamics.\n3. Parlor: Compact, vintage body shape with neck meeting the body at the 12th fret, focused mid-range punch, intimate projection, and great portability."
+  },
+  {
+    "id": 5,
+    "record_id": 2,
+    "category": "Acoustic Guitars & Selection Guide",
+    "query": "How does a classical guitar differ from a steel-string acoustic guitar?",
+    "relevant_chunk_ids": [
+      4,
+      5
+    ],
+    "reference_answer": "Classical guitars use nylon strings, which produce a softer, mellow, and round tone with substantially less finger tension for beginners. They feature wide, flat fingerboards (usually 52mm nut width) without fretboard radius or fret markers, and are traditionally played fingerstyle for classical, flamenco, and bossa nova.\nSteel-string acoustics use metal alloy strings (phosphor bronze or 80/20 bronze) producing a bright, percussive, and ringing sound with narrower, radiused necks (typically 43mm nut width) designed for chord strumming and modern flatpicking."
+  },
+  {
+    "id": 6,
+    "record_id": 15,
+    "category": "Electric Guitars & Pickup Configuration",
+    "query": "What is a Semi-Hollow body guitar (e.g., Gibson ES-335)?",
+    "relevant_chunk_ids": [
+      19
+    ],
+    "reference_answer": "A semi-hollow guitar features a hollow body interior with F-holes but includes a solid center block of maple or spruce running down the middle from neck to bridge. The center block eliminates high-gain feedback and increases sustain like a solid-body, while the hollow outer wings add acoustic warmth, airiness, and harmonic resonance suited for Jazz, Blues, and Indie Rock."
+  },
+  {
+    "id": 7,
+    "record_id": 9,
+    "category": "Electric Guitars & Pickup Configuration",
+    "query": "What are the characteristics of a Gibson Les Paul?",
+    "relevant_chunk_ids": [
+      12
+    ],
+    "reference_answer": "The Gibson Les Paul features a thick, solid mahogany body typically topped with a carved maple cap, a set mahogany neck, and dual Humbucking pickups with a 3-way toggle switch and independent volume/tone controls.\nIt delivers thick, warm, saturated tone with heavy low-end punch, harmonic richness, and exceptional sustain. It excels in Hard Rock, Heavy Metal, Blues-Rock, and Jazz, as popularized by Slash, Jimmy Page, and Gary Moore."
+  },
+  {
+    "id": 8,
+    "record_id": 8,
+    "category": "Electric Guitars & Pickup Configuration",
+    "query": "What are the tonal characteristics of a Fender Stratocaster?",
+    "relevant_chunk_ids": [
+      11
+    ],
+    "reference_answer": "The Fender Stratocaster features a contoured double-cutaway solid alder or ash body with three single-coil pickups and a 5-way selector switch. It is famous for its bright, articulate, 'bell-like' clean chime, glassy highs, and signature 'quack' or scooped out-of-phase tones in positions 2 and 4 (bridge+middle and neck+middle).\nIt is the quintessential instrument for Blues, Funk, Classic Rock, Pop, and Neo-soul, played by legends like Jimi Hendrix, Stevie Ray Vaughan, and John Mayer."
+  },
+  {
+    "id": 9,
+    "record_id": 11,
+    "category": "Electric Guitars & Pickup Configuration",
+    "query": "What is the difference between Single-Coil and Humbucker pickups?",
+    "relevant_chunk_ids": [
+      15
+    ],
+    "reference_answer": "Single-coil pickups use a single wire coil wrapped around magnetic pole pieces, producing bright, crisp, articulate, and transparent highs, but they are susceptible to electromagnetic 60-cycle hum and noise under high gain.\nHumbuckers use two coils wired in reverse polarity and series with opposite magnetic orientation, canceling out 60-cycle hum ('bucking the hum'). They produce a thicker, darker, higher-output signal with compressed mids that handle heavy overdrive and distortion cleanly."
+  },
+  {
+    "id": 10,
+    "record_id": 10,
+    "category": "Electric Guitars & Pickup Configuration",
+    "query": "How does a Fender Telecaster differ from a Stratocaster?",
+    "relevant_chunk_ids": [
+      13,
+      14
+    ],
+    "reference_answer": "The Telecaster is a single-cutaway guitar with two single-coil pickups, a fixed 'ashtray' bridge with strings running through the body, and a master volume and tone circuit. The bridge pickup is mounted directly on a metal baseplate, producing the legendary high-output, cutting 'Tele twang' with aggressive bite and punch.\nWhile the Stratocaster offers smoother contours and vibrato bridge versatility, the Telecaster is renowned for simplicity, rock-solid tuning stability, and raw tonal presence across Country, Indie, and Rock."
+  },
+  {
+    "id": 11,
+    "record_id": 13,
+    "category": "Electric Guitars & Pickup Configuration",
+    "query": "What are Active pickups and how do they differ from Passive pickups?",
+    "relevant_chunk_ids": [
+      17
+    ],
+    "reference_answer": "Passive pickups generate electrical current purely through electromagnetic induction from string vibrations without external power, offering organic dynamics and natural touch sensitivity.\nActive pickups (e.g., EMG, Fishman Fluence) utilize low-impedance coils paired with an integrated active preamp powered by a 9V onboard battery. They provide ultra-high output, dead-silent noise performance, extended frequency response, and uniform clarity even under extreme high-gain distortion."
+  },
+  {
+    "id": 12,
+    "record_id": 20,
+    "category": "Tonewoods & Construction",
+    "query": "What are the properties of Maple as a neck and fingerboard tonewood?",
+    "relevant_chunk_ids": [
+      25
+    ],
+    "reference_answer": "Hard rock maple is dense, heavy, and structurally rigid, providing outstanding neck stability against string tension. Tonally, maple yields a fast transient attack, bright top-end snap, tight bass, and distinct note separation, widely used on Fender guitars for both necks and glossy or satin fretboards."
+  },
+  {
+    "id": 13,
+    "record_id": 19,
+    "category": "Tonewoods & Construction",
+    "query": "How do Mahogany and Indian Rosewood compare as acoustic back and sides?",
+    "relevant_chunk_ids": [
+      24
+    ],
+    "reference_answer": "Mahogany back and sides produce a focused, dry, woody, and direct tone with pronounced midrange punch, fast note decay, and minimal overtone clutter, making it exceptional for recording and cutting through a mix.\nIndian Rosewood delivers a deep, resonant low-end bass rumble, sparkling bell-like highs, and a scooped midrange with lush, reverberant harmonic overtones and long sustain."
+  },
+  {
+    "id": 14,
+    "record_id": 18,
+    "category": "Tonewoods & Construction",
+    "query": "What are the tonal characteristics of Sitka Spruce vs Western Red Cedar?",
+    "relevant_chunk_ids": [
+      23
+    ],
+    "reference_answer": "Sitka Spruce is the most popular acoustic soundboard wood, offering high stiffness-to-weight ratio, crisp dynamic headroom, punchy projection, and bell-like clarity suitable for aggressive strumming and flatpicking.\nWestern Red Cedar is softer and less dense than spruce, providing instant acoustic response, warm overtone saturation, darker harmonic bloom, and rich midrange at lower volume thresholds, making it the favorite for fingerstyle and classical playing."
+  },
+  {
+    "id": 15,
+    "record_id": 21,
+    "category": "Tonewoods & Construction",
+    "query": "How does Rosewood compare to Ebony for guitar fretboards?",
+    "relevant_chunk_ids": [
+      26
+    ],
+    "reference_answer": "Rosewood is naturally oily and open-grained with a medium density, offering a warm, velvety tactile feel and smoothing out harsh treble frequencies.\nEbony is extremely dense, heavy, tight-grained, and naturally slick, producing crisp percussive attack, snappy articulation, rapid sustain, and a luxurious dark aesthetic."
+  },
+  {
+    "id": 16,
+    "record_id": 22,
+    "category": "Tonewoods & Construction",
+    "query": "What is the difference between a Bolt-On, Set-Neck, and Neck-Through construction?",
+    "relevant_chunk_ids": [
+      27,
+      28
+    ],
+    "reference_answer": "1. Bolt-On (e.g., Fender Stratocaster): Neck is bolted to body pocket with 4 screws; produces snappy attack, high treble definition, and allows easy neck replacement/repair.\n2. Set-Neck (e.g., Gibson Les Paul): Neck is glued into body mortise with wood tenon; enhances midrange warmth, low-end coupling, and acoustic sustain.\n3. Neck-Through (e.g., Jackson, ESP): Central neck wood extends continuously through entire body length with side wings glued on; provides maximum sustain, seamless upper-fret heel access, and structural rigidity."
+  },
+  {
+    "id": 17,
+    "record_id": 17,
+    "category": "Tonewoods & Construction",
+    "query": "What is the acoustic difference between Solid Wood and Laminated Wood?",
+    "relevant_chunk_ids": [
+      21,
+      22
+    ],
+    "reference_answer": "Solid tonewood consists of single, uninterrupted planks of wood sawn directly from timber logs. Solid tops vibrate freely with superior acoustic projection, harmonic overtone complexity, and dynamic sensitivity, and they 'open up' (sound richer and warmer over time as wood resins crystallize).\nLaminate wood is constructed by gluing several thin veneers together under high pressure. While laminates are highly resistant to humidity changes, cracking, and cost significantly less, they possess lower vibrational efficiency and do not age tonally."
+  },
+  {
+    "id": 18,
+    "record_id": 28,
+    "category": "Guitar Maintenance, Action & Setup",
+    "query": "How often should guitar strings be changed and how do you clean the fretboard?",
+    "relevant_chunk_ids": [
+      37
+    ],
+    "reference_answer": "Uncoated strings should be changed every 20-40 playing hours or every 3-6 weeks as sweat and oil cause oxidation, dull tone, and intonation drift. Coated strings (e.g., Elixir Nanoweb) last 3-6 months.\nWhen changing strings: Clean unfinished rosewood/ebony fretboards using Dunlop 65 or 100% pure Lemon Oil / mineral oil with a micro-fiber cloth to condition wood and dissolve dirt (never apply lemon oil to finished maple fretboards)."
+  },
+  {
+    "id": 19,
+    "record_id": 23,
+    "category": "Guitar Maintenance, Action & Setup",
+    "query": "What is guitar action and what is the standard recommended string height?",
+    "relevant_chunk_ids": [
+      29,
+      30
+    ],
+    "reference_answer": "Guitar action is the clearance distance between the top of the metal frets and the bottom of the guitar strings measured at the 12th fret.\nStandard recommended action heights:\n• Electric Guitar: 1.5mm - 2.0mm on low E (6th string), 1.0mm - 1.5mm on high E (1st string).\n• Steel-string Acoustic: 2.0mm - 2.5mm on low E, 1.5mm - 2.0mm on high E.\n• Classical Guitar: 3.5mm - 4.0mm on low E, 2.8mm - 3.2mm on high E.\nLower action facilitates faster playing and easier chord fretting, while higher action allows harder picking without fret buzzing."
+  },
+  {
+    "id": 20,
+    "record_id": 27,
+    "category": "Guitar Maintenance, Action & Setup",
+    "query": "How should an acoustic guitar be protected against humidity and temperature?",
+    "relevant_chunk_ids": [
+      36
+    ],
+    "reference_answer": "Acoustic guitars should ideally be stored in a relative humidity (RH) range of 45% to 55% and temperature of 20°C - 25°C (68°F - 77°F).\n• Low Humidity (<35%): Causes soundboard sinking, sharp protruding fret ends, neck warping, and wood cracks (use soundhole humidifiers like Boveda or D'Addario Humidipak).\n• High Humidity (>65%): Causes wood swelling, high action, dull acoustic volume, and glue joint softening (use silica gel desiccant packs in hardcase)."
+  },
+  {
+    "id": 21,
+    "record_id": 26,
+    "category": "Guitar Maintenance, Action & Setup",
+    "query": "Why do guitar frets buzz and how do you troubleshoot fret buzz?",
+    "relevant_chunk_ids": [
+      35
+    ],
+    "reference_answer": "Fret buzz occurs when a vibrating string rattles against a fretwire. Key causes and solutions:\n1. Open string buzz: Nut slots cut too deep (shim or replace nut).\n2. Buzz on frets 1 to 5: Insufficient neck relief/back-bow (loosen truss rod counter-clockwise).\n3. Buzz on frets 12 and above: Bridge saddles or acoustic saddle set too low (raise bridge saddles).\n4. Buzz on a single isolated fret: Uneven or popped high fret (requires fret leveling, crowning, and polishing)."
+  },
+  {
+    "id": 22,
+    "record_id": 25,
+    "category": "Guitar Maintenance, Action & Setup",
+    "query": "How do you check guitar intonation and how is it adjusted?",
+    "relevant_chunk_ids": [
+      33,
+      34
+    ],
+    "reference_answer": "Intonation ensures every note remains in tune all the way up the fretboard.\nTo check: Tune the open string perfectly with an electronic tuner, then play the fretted note at the 12th fret.\n• If the 12th fretted note is SHARP compared to the open pitch: The string length is too short — move the bridge saddle BACKWARD (away from the neck/lengthen string).\n• If the 12th fretted note is FLAT compared to the open pitch: The string length is too long — move the bridge saddle FORWARD (toward the neck/shorten string)."
+  },
+  {
+    "id": 23,
+    "record_id": 24,
+    "category": "Guitar Maintenance, Action & Setup",
+    "query": "What is a Truss Rod and how do you adjust neck relief?",
+    "relevant_chunk_ids": [
+      31,
+      32
+    ],
+    "reference_answer": "A truss rod is an adjustable steel rod installed inside the guitar neck beneath the fretboard to counteract string tension and regulate neck curvature (relief).\n• To fix Back-Bow (neck bending backward causing fret buzz at frets 1-5): Turn the allen wrench COUNTER-CLOCKWISE (loosen) to add forward bow/relief.\n• To fix excessive Up-Bow (neck bending forward causing high action at frets 7-12): Turn the allen wrench CLOCKWISE (tighten) in 1/4-turn increments to flatten the neck.\nAlways allow the wood 15-30 minutes to settle after adjustment."
+  },
+  {
+    "id": 24,
+    "record_id": 33,
+    "category": "Amplifiers & Effects Pedals",
+    "query": "What is an Impulse Response (IR) in guitar modeling?",
+    "relevant_chunk_ids": [
+      44
+    ],
+    "reference_answer": "An Impulse Response (IR) is an advanced digital acoustic measurement capturing the exact acoustic resonance, frequency response, and phase characteristics of a specific guitar speaker cabinet, speaker cone, microphone model, mic placement angle, and studio room reflection."
+  },
+  {
+    "id": 25,
+    "record_id": 30,
+    "category": "Amplifiers & Effects Pedals",
+    "query": "What is the signal chain order for guitar effects pedals?",
+    "relevant_chunk_ids": [
+      40
+    ],
+    "reference_answer": "The standard recommended pedalboard signal chain is:\n1. Dynamics & Pitch: Tuner → Wah → Pitch Shifter / Whammy → Compressor\n2. Gain / Drive: Boost → Overdrive → Distortion → Fuzz\n3. Equalization: EQ pedal (can also sit in FX loop)\n4. Modulation: Chorus → Flanger → Phaser → Tremolo (often placed in Amp FX Loop)\n5. Time-Based & Ambient: Delay → Reverb (placed at end of chain or in Amp FX Loop)\n6. Volume / Utility: Volume pedal, Looper, Noise Gate."
+  },
+  {
+    "id": 26,
+    "record_id": 31,
+    "category": "Amplifiers & Effects Pedals",
+    "query": "What is the difference between Overdrive, Distortion, and Fuzz?",
+    "relevant_chunk_ids": [
+      41,
+      42
+    ],
+    "reference_answer": "• Overdrive: Soft-clipping circuit simulating a tube amp driven just past clean breakup; dynamic, responsive to picking attack, preserves original guitar note clarity.\n• Distortion: Hard-clipping circuit providing uniform saturation, sustain, aggressive harmonics, and compression regardless of picking dynamics (e.g., BOSS DS-1, ProCo Rat).\n• Fuzz: Extreme transistor clipping (germanium/silicon) that squares off waveforms completely, yielding thick, buzzing, synth-like, chaotic vintage sustain (e.g., Electro-Harmonix Big Muff, Fuzz Face)."
+  },
+  {
+    "id": 27,
+    "record_id": 32,
+    "category": "Amplifiers & Effects Pedals",
+    "query": "What is an Effects Loop (FX Loop) and why should you use it?",
+    "relevant_chunk_ids": [
+      43
+    ],
+    "reference_answer": "An Effects Loop places effects pedals between the amplifier's Preamp section (where preamp gain/overdrive is created) and Power Amp section.\nPlacing time-based pedals (Delay, Reverb, Chorus) in the FX Loop prevents delay repeats and reverb tails from being distorted and turned to muddy noise by high-gain preamp distortion, ensuring pristine, crystal-clear echoes."
+  },
+  {
+    "id": 28,
+    "record_id": 29,
+    "category": "Amplifiers & Effects Pedals",
+    "query": "What is the difference between Tube, Solid-State, and Digital Modeling amplifiers?",
+    "relevant_chunk_ids": [
+      38,
+      39
+    ],
+    "reference_answer": "1. Tube (Valve) Amps: Use vacuum tubes for preamp and power amp stages; produce warm, dynamic, touch-sensitive compression, natural harmonic overdrive, and organic punch.\n2. Solid-State Amps: Use transistors and analog circuits; produce pristine clean headroom, reliable operation, lightweight builds, and lower maintenance costs.\n3. Digital Modeling / Profiling (e.g., Neural DSP Quad Cortex, Line 6 Helix, Kemper): Use DSP algorithms to mathematically replicate hundreds of vintage tube amps, speaker cabinets (IRs), and studio effects with 100% consistency and direct recording outputs."
+  },
+  {
+    "id": 29,
+    "record_id": 34,
+    "category": "Music Theory, Scales & Solos",
+    "query": "What is the Minor Pentatonic Scale and why is it essential for guitar solos?",
+    "relevant_chunk_ids": [
+      45
+    ],
+    "reference_answer": "The Minor Pentatonic Scale is a 5-note scale derived from the Natural Minor scale by removing the 2nd and 6th scale degrees: Formula = 1 - b3 - 4 - 5 - b7.\nIn the key of A minor, the notes are: A - C - D - E - G.\nBecause it eliminates half-step dissonances, it is the foundational scale for Rock, Blues, Pop, and Metal improvisation, fitting effortlessly over minor and dominant 7th chord progressions."
+  },
+  {
+    "id": 30,
+    "record_id": 37,
+    "category": "Music Theory, Scales & Solos",
+    "query": "What is the CAGED System on the guitar fretboard?",
+    "relevant_chunk_ids": [
+      49
+    ],
+    "reference_answer": "The CAGED system is a fretboard visualization framework linking 5 open chord shapes (C, A, G, E, D) across all 12 positions of the guitar neck.\nEvery chord, arpeggio, and pentatonic/major scale box connects sequentially in the cycle C-A-G-E-D-C along the fretboard, allowing guitarists to play any chord or solo in any key anywhere on the neck."
+  },
+  {
+    "id": 31,
+    "record_id": 38,
+    "category": "Music Theory, Scales & Solos",
+    "query": "What is the Circle of Fifths and how is it used?",
+    "relevant_chunk_ids": [
+      50
+    ],
+    "reference_answer": "The Circle of Fifths is a geometric clock-like representation of all 12 chromatic pitches showing their key signatures and harmonic relationships. Moving clockwise adds one sharp (#) via ascending 5ths (C, G, D, A, E, B, F#), while moving counter-clockwise adds one flat (b) via ascending 4ths (C, F, Bb, Eb, Ab, Db, Gb).\nIt is used to determine key signatures, transpose chords, find relative minor keys, and construct harmonic chord progressions (e.g., ii-V-I)."
+  },
+  {
+    "id": 32,
+    "record_id": 35,
+    "category": "Music Theory, Scales & Solos",
+    "query": "What is the Blues Scale and what is the 'Blue Note'?",
+    "relevant_chunk_ids": [
+      46
+    ],
+    "reference_answer": "The Blues Scale is created by adding a flattened 5th (b5) — known as the 'Blue Note' — to the standard Minor Pentatonic scale: Formula = 1 - b3 - 4 - b5 - 5 - b7.\nIn the key of A Blues, the notes are: A - C - D - D# (Eb) - E - G.\nThe chromatic tension of the b5 gives the scale its signature soulful, gritty, bluesy cry when bent or resolved to the 4th or 5th degree."
+  },
+  {
+    "id": 33,
+    "record_id": 36,
+    "category": "Music Theory, Scales & Solos",
+    "query": "What are the 7 Major Scale Modes?",
+    "relevant_chunk_ids": [
+      47,
+      48
+    ],
+    "reference_answer": "The 7 modes are diatonic scales derived by starting on each consecutive degree of the Major scale (Ionian):\n1. Ionian (1-2-3-4-5-6-7) : Major / Happy\n2. Dorian (1-2-b3-4-5-6-b7) : Minor with bright raised 6th / Funky, Jazzy Blues\n3. Phrygian (1-b2-b3-4-5-b6-b7) : Minor with dark b2 / Flamenco, Metal\n4. Lydian (1-2-3-#4-5-6-7) : Major with ethereal #4 / Dreamy, Sci-Fi\n5. Mixolydian (1-2-3-4-5-6-b7) : Major with b7 / Southern Rock, Blues\n6. Aeolian (1-2-b3-4-5-b6-b7) : Natural Minor / Melodic, Somber\n7. Locrian (1-b2-b3-4-b5-b6-b7) : Diminished / Unresolved, Tense."
+  },
+  {
+    "id": 34,
+    "record_id": 42,
+    "category": "Playing Techniques & Exercises",
+    "query": "What is a Pinch Harmonic (Squeal) and how do you produce it?",
+    "relevant_chunk_ids": [
+      54
+    ],
+    "reference_answer": "A pinch harmonic is executed by striking the string with the guitar pick and immediately brushing the side of the picking-hand thumb against the vibrating string node in a single motion, canceling the fundamental frequency and triggering a high-pitched artificial harmonic overtone, which is then emphasized with wide vibrato."
+  },
+  {
+    "id": 35,
+    "record_id": 43,
+    "category": "Playing Techniques & Exercises",
+    "query": "What is Travis Picking in acoustic fingerstyle?",
+    "relevant_chunk_ids": [
+      55
+    ],
+    "reference_answer": "Travis picking is a fingerpicking technique named after Merle Travis where the thumb maintains a steady, syncopated alternating bass line on the lower three strings (beats 1, 2, 3, 4) while the index and middle fingers independently pluck syncopated melody and chord harmony on the treble strings."
+  },
+  {
+    "id": 36,
+    "record_id": 39,
+    "category": "Playing Techniques & Exercises",
+    "query": "What is Alternate Picking and how do you practice it?",
+    "relevant_chunk_ids": [
+      51
+    ],
+    "reference_answer": "Alternate picking is the fundamental picking technique of strictly alternating downward and upward pick strokes (Down-Up-Down-Up) in continuous subdivision.\nPractice by setting a metronome at 60 BPM playing 16th notes on single strings and chromatic 1-2-3-4 permutations, ensuring pick depth is minimal, wrist remains relaxed, and pick angle is slanted slightly (15-20 degrees)."
+  },
+  {
+    "id": 37,
+    "record_id": 40,
+    "category": "Playing Techniques & Exercises",
+    "query": "What is the difference between Legato and Staccato playing?",
+    "relevant_chunk_ids": [
+      52
+    ],
+    "reference_answer": "Legato is a smooth, fluid phrasing technique where notes are connected seamlessly using Hammer-ons, Pull-offs, and Slides with minimal right-hand picking, producing a vocal-like fluidity (famous in Allan Holdsworth and Joe Satriani solos).\nStaccato is playing notes sharply detached, shortened, and muted immediately after attack, giving crisp percussive rhythm."
+  },
+  {
+    "id": 38,
+    "record_id": 41,
+    "category": "Playing Techniques & Exercises",
+    "query": "What is Sweep Picking and how is it executed?",
+    "relevant_chunk_ids": [
+      53
+    ],
+    "reference_answer": "Sweep picking is an advanced technique used to play fast arpeggios across adjacent strings with a single continuous downward or upward 'raking' stroke of the pick.\nSynchronization requires the fretting hand to fret only one note at a time and immediately release finger pressure (rolling the finger) to mute previous strings so notes ring individually as an arpeggio rather than a strummed chord."
+  },
+  {
+    "id": 39,
+    "record_id": 487,
+    "category": "Guitar Chord Fingerings & Voicings",
+    "query": "How do you play the alternative voicing of B6 (B 6) on guitar?",
+    "relevant_chunk_ids": [
+      499
+    ],
+    "reference_answer": "The B 6 (Major 6th chord) is fretted and voiced across the 6 strings (from Low E to High E) with fret pattern [x-2-1-1-0-2]:\n- String 6 (Low E): Mute / Do not play (x)\n- String 5 (A): Fret 2\n- String 4 (D): Fret 1\n- String 3 (G): Fret 1\n- String 2 (B): Open string (0)\n- String 1 (High E): Fret 2"
+  },
+  {
+    "id": 40,
+    "record_id": 169,
+    "category": "Guitar Chord Fingerings & Voicings",
+    "query": "How do you play the alternative voicing of D#sus2 (D# sus2) on guitar?",
+    "relevant_chunk_ids": [
+      181
+    ],
+    "reference_answer": "The D# sus2 (Suspended 2nd chord) is fretted and voiced across the 6 strings (from Low E to High E) with fret pattern [x-6-8-8-6-6]:\n- String 6 (Low E): Mute / Do not play (x)\n- String 5 (A): Fret 6\n- String 4 (D): Fret 8\n- String 3 (G): Fret 8\n- String 2 (B): Fret 6\n- String 1 (High E): Fret 6\n- Barre Note: Barre across fret 6 using the index finger."
+  },
+  {
+    "id": 41,
+    "record_id": 392,
+    "category": "Guitar Chord Fingerings & Voicings",
+    "query": "How do you play the Amaj7 (A maj7) chord on guitar?",
+    "relevant_chunk_ids": [
+      404
+    ],
+    "reference_answer": "The A maj7 (Major 7th chord) is fretted and voiced across the 6 strings (from Low E to High E) with fret pattern [x-0-2-1-2-0]:\n- String 6 (Low E): Mute / Do not play (x)\n- String 5 (A): Open string (0)\n- String 4 (D): Fret 2\n- String 3 (G): Fret 1\n- String 2 (B): Fret 2\n- String 1 (High E): Open string (0)"
+  },
+  {
+    "id": 42,
+    "record_id": 250,
+    "category": "Guitar Chord Fingerings & Voicings",
+    "query": "How do you play the Fdim7 (F dim7) chord on guitar?",
+    "relevant_chunk_ids": [
+      262
+    ],
+    "reference_answer": "The F dim7 (Diminished 7th chord) is fretted and voiced across the 6 strings (from Low E to High E) with fret pattern [1-2-3-1-3-1]:\n- String 6 (Low E): Fret 1\n- String 5 (A): Fret 2\n- String 4 (D): Fret 3\n- String 3 (G): Fret 1\n- String 2 (B): Fret 3\n- String 1 (High E): Fret 1\n- Barre Note: Barre across fret 1 using the index finger."
+  },
+  {
+    "id": 43,
+    "record_id": 322,
+    "category": "Guitar Chord Fingerings & Voicings",
+    "query": "How do you play the Gsus4 (G sus4) chord on guitar?",
+    "relevant_chunk_ids": [
+      334
+    ],
+    "reference_answer": "The G sus4 (Suspended 4th chord) is fretted and voiced across the 6 strings (from Low E to High E) with fret pattern [3-3-0-0-3-3]:\n- String 6 (Low E): Fret 3\n- String 5 (A): Fret 3\n- String 4 (D): Open string (0)\n- String 3 (G): Open string (0)\n- String 2 (B): Fret 3\n- String 1 (High E): Fret 3"
+  },
+  {
+    "id": 44,
+    "record_id": 379,
+    "category": "Guitar Chord Fingerings & Voicings",
+    "query": "How do you play the alternative voicing of G#m9 (G# m9) on guitar?",
+    "relevant_chunk_ids": [
+      391
+    ],
+    "reference_answer": "The G# m9 (Minor 9th chord) is fretted and voiced across the 6 strings (from Low E to High E) with fret pattern [4-2-4-3-x-2]:\n- String 6 (Low E): Fret 4\n- String 5 (A): Fret 2\n- String 4 (D): Fret 4\n- String 3 (G): Fret 3\n- String 2 (B): Mute / Do not play (x)\n- String 1 (High E): Fret 2\n- Barre Note: Barre across fret 2 using the index finger."
+  },
+  {
+    "id": 45,
+    "record_id": 264,
+    "category": "Guitar Chord Fingerings & Voicings",
+    "query": "How do you play the Fm9 (F m9) chord on guitar?",
+    "relevant_chunk_ids": [
+      276
+    ],
+    "reference_answer": "The F m9 (Minor 9th chord) is fretted and voiced across the 6 strings (from Low E to High E) with fret pattern [1-3-1-1-1-3]:\n- String 6 (Low E): Fret 1\n- String 5 (A): Fret 3\n- String 4 (D): Fret 1\n- String 3 (G): Fret 1\n- String 2 (B): Fret 1\n- String 1 (High E): Fret 3\n- Barre Note: Barre across fret 1 using the index finger."
+  },
+  {
+    "id": 46,
+    "record_id": 179,
+    "category": "Guitar Chord Fingerings & Voicings",
+    "query": "How do you play the alternative voicing of D#add9 (D# add9) on guitar?",
+    "relevant_chunk_ids": [
+      191
+    ],
+    "reference_answer": "The D# add9 (Add 9 chord) is fretted and voiced across the 6 strings (from Low E to High E) with fret pattern [x-6-5-x-6-6]:\n- String 6 (Low E): Mute / Do not play (x)\n- String 5 (A): Fret 6\n- String 4 (D): Fret 5\n- String 3 (G): Mute / Do not play (x)\n- String 2 (B): Fret 6\n- String 1 (High E): Fret 6"
+  },
+  {
+    "id": 47,
+    "record_id": 137,
+    "category": "Guitar Chord Fingerings & Voicings",
+    "query": "How do you play the alternative voicing of Ddim7 (D dim7) on guitar?",
+    "relevant_chunk_ids": [
+      149
+    ],
+    "reference_answer": "The D dim7 (Diminished 7th chord) is fretted and voiced across the 6 strings (from Low E to High E) with fret pattern [x-5-6-4-6-4]:\n- String 6 (Low E): Mute / Do not play (x)\n- String 5 (A): Fret 5\n- String 4 (D): Fret 6\n- String 3 (G): Fret 4\n- String 2 (B): Fret 6\n- String 1 (High E): Fret 4\n- Barre Note: Barre across fret 4 using the index finger."
+  },
+  {
+    "id": 48,
+    "record_id": 267,
+    "category": "Guitar Chord Fingerings & Voicings",
+    "query": "How do you play the alternative voicing of Fmaj9 (F maj9) on guitar?",
+    "relevant_chunk_ids": [
+      279
+    ],
+    "reference_answer": "The F maj9 (Major 9th chord) is fretted and voiced across the 6 strings (from Low E to High E) with fret pattern [1-0-2-0-1-1]:\n- String 6 (Low E): Fret 1\n- String 5 (A): Open string (0)\n- String 4 (D): Fret 2\n- String 3 (G): Open string (0)\n- String 2 (B): Fret 1\n- String 1 (High E): Fret 1"
+  },
+  {
+    "id": 49,
+    "record_id": 483,
+    "category": "Guitar Chord Fingerings & Voicings",
+    "query": "How do you play the alternative voicing of Badd9 (B add9) on guitar?",
+    "relevant_chunk_ids": [
+      495
+    ],
+    "reference_answer": "The B add9 (Add 9 chord) is fretted and voiced across the 6 strings (from Low E to High E) with fret pattern [7-6-x-6-7-7]:\n- String 6 (Low E): Fret 7\n- String 5 (A): Fret 6\n- String 4 (D): Mute / Do not play (x)\n- String 3 (G): Fret 6\n- String 2 (B): Fret 7\n- String 1 (High E): Fret 7\n- Barre Note: Barre across fret 6 using the index finger."
+  }
+]
